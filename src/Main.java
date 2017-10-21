@@ -15,12 +15,14 @@ public class Main {
             System.out.println("MENU:\n" +
                     "[1] Tabuada \n" +
                     "[2] Fatorial \n" +
+                    "[3] Bascara \n" +
                     "[0] Sair");
             opcao = s.nextInt();
 
             switch (opcao) {
                 case 1: tabuada(); break;
                 case 2: fatorial(); break;
+                case 3: bascara(); break;
             }
         } while(opcao != 0);
     }
@@ -48,5 +50,22 @@ public class Main {
         }
 
         System.out.println("O fatorial de " + num + " é " + fat);
+    }
+
+    public void bascara() {
+        System.out.println("Informe variavel A");
+        double a = s.nextDouble();
+        System.out.println("Informe variavel B");
+        double b = s.nextDouble();
+        System.out.println("Informe variavel C");
+        double c = s.nextDouble();
+
+        double delta = (b * b) - (4 * a * c);
+
+        double x1 = ((-b) + Math.sqrt(delta)) / (2 * a);
+        double x2 = ((-b) - Math.sqrt(delta)) / (2 * a);
+
+        System.out.println("O x1 da questão será " + x1);
+        System.out.println("O x2 da questão será " + x2);
     }
 }
