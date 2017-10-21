@@ -16,6 +16,7 @@ public class Main {
                     "[1] Tabuada \n" +
                     "[2] Fatorial \n" +
                     "[3] Bascara \n" +
+                    "[4] Pitagoras \n" +
                     "[0] Sair");
             opcao = s.nextInt();
 
@@ -23,6 +24,7 @@ public class Main {
                 case 1: tabuada(); break;
                 case 2: fatorial(); break;
                 case 3: bascara(); break;
+                case 4: pitagoras(); break;
             }
         } while(opcao != 0);
     }
@@ -67,5 +69,16 @@ public class Main {
 
         System.out.println("O x1 da questão será " + x1);
         System.out.println("O x2 da questão será " + x2);
+    }
+
+    public void pitagoras() {
+        System.out.println("Informe variavel A");
+        double a = s.nextDouble();
+        System.out.println("Informe variavel B");
+        double b = s.nextDouble();
+
+        double c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+
+        System.out.println("Hipotenusa = " + c);
     }
 }
